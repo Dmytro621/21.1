@@ -23,12 +23,8 @@ userInputButton.addEventListener('click', function starWars(event) {
         } return response.json()
         })
         .then((data) => {
-            if (data.status === 'success') {
                 // document.getElementById('text').textContent = `Id: ${data.id}, Controller: ${data.controller}`;
                 document.getElementById('text').textContent = JSON.stringify(data, null, 2)
-            } else {
-                document.getElementById('text').textContent = 'Error'
-            }
         })
     .catch((error) => console.error('Error:', error))
 }
